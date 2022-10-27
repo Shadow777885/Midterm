@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+}
+
+p {
+    color: #006400;
+    font-family: "monaco", monospace;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+
+h1 {
+    color: #006400;
+    font-family: "monaco", monospace;
+}
+.button {
+    background-color: #006400; 
+    border: none;
+    color: white;
+    padding: 9px 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "monaco", monospace;
+    font-size: 15px;
+  }
+
+  input[type=text] {
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: black;
+    color: greenyellow;
+  }
+  input[type=ID] {
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: black;
+    color: greenyellow;
+  }
+   input[type=PullID] {
+    border: 2px solid red;
+    border-radius: 4px;
+    background-color: black;
+    color: greenyellow;
+  }
+
+  label{
+    background-color: black;
+    color: greenyellow;
+  }
