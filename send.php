@@ -11,9 +11,9 @@
 
     $conn = mysqli_connect($server, $username, $password, $database);
     if (!$conn) {
-        die("Connection failed: " {mysqli_connect_error()});
+        die("Connection failed: {mysqli_connect_error()}");
       }
-      $sql = "SELECT num_items, product_name FROM Products WHERE product_name={$radio};";
+      $sql = "SELECT num_items, product_name FROM Products WHERE product_name='{$radio}';";
       echo $sql;
       $result = mysqli_query($conn, $sql);
       ?>
@@ -23,7 +23,7 @@
     You selected: <?=$radio?>.<br/>
     <?php
         echo "test $radio.";
-        foreach($result as $row) // There should only be one row returned! 
+        foreach($result as $row) // There should only be one row returned!
         { 
             echo "There are {$row['num_items']} {$row['product_name']}.";
         } 
