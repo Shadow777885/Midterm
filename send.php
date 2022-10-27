@@ -23,7 +23,7 @@
     <?php
         foreach($result as $row) // There should only be one row returned! 
         { 
-            echo "{$row['course_name']} has {$row['num_students']} students."; 
+            echo "There are {$row['num_items']} $radio."; 
         } 
     mysqli_close($conn);
     ?>
