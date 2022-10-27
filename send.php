@@ -14,7 +14,7 @@
         die("Connection failed: " . mysqli_connect_error());
       }
 
-    $sql = "SELECT num_items FROM Products WHERE product_name={"$radio"};";
+    $sql = "SELECT num_items FROM Products WHERE product_name=$radio;";
     $result = mysqli_query($conn, $sql);
     $row = mysql_fetch_row($result);
     foreach($result as $row) // There should only be one row returned 
