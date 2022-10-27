@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <p> Test begin <p>
     <?php
     $server = "localhost";
     $username = "php";
@@ -27,7 +28,7 @@
         } 
     mysqli_close($conn);
     ?>
-    <p> Test <p>
+    <p> Test end <p>
 </body>
 
 </html>
