@@ -16,7 +16,6 @@
       $sql = "SELECT num_items FROM Products WHERE product_name={$radio};";
       echo $sql;
       $result = mysqli_query($conn, $sql);
-      echo $result;
       ?>
 </head>
 
@@ -26,7 +25,7 @@
         foreach($result as $row) // There should only be one row returned! 
         { 
             echo "There are {$row['num_items']} $radio.";
-            echo "test $radio"; 
+            echo "test $radio."; 
         } 
     mysqli_close($conn);
     ?>
