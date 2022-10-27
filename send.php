@@ -11,7 +11,7 @@
 
     $conn = mysqli_connect($server, $username, $password, $database);
     if (!$conn) {
-        echo("Connection failed: " {mysqli_connect_error()});
+        die("Connection failed: " {mysqli_connect_error()});
       }
       $sql = "SELECT num_items FROM Products WHERE product_name={$radio};";
       $result = mysqli_query($conn, $sql);
