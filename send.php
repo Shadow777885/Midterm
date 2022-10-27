@@ -7,7 +7,7 @@
     $username = "php";
     $password = "1.1.";
     $database = "Users";
-    $radio = htmlspecialchars($_GET['radio']);
+    $radio = htmlspecialchars($_POST['radio']);
 
     $conn = mysqli_connect($server, $username, $password, $database);
     if (!$conn) {
@@ -22,6 +22,7 @@
 <body>
     You selected: <?=$radio?>.<br/>
     <?php
+        echo "test $radio.";
         foreach($result as $row) // There should only be one row returned! 
         { 
             echo "There are {$row['num_items']} $radio.";
