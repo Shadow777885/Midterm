@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <p>
     <?php
     $server = "localhost";
     $username = "php";
@@ -17,13 +16,16 @@
     $sql = "SELECT num_items FROM Products WHERE product_name=$radio;";
     $result = mysqli_query($conn, $sql);
     $row = mysql_fetch_row($result);
-    foreach($result as $row) // There should only be one row returned 
-    { 
-        echo "There are {$row['num_items']} $radio in stock."; 
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while($row = mysqli_fetch_assoc($result)) {
+            echo "There are {$row['num_items']} $radio in stock."; 
+        }
     }
-    echo "Just A test"; 
+    else{
+        echo "Out of luck";
+    }
     mysqli_close($conn);
     ?>
-    <p>
 </body>
 </html>
